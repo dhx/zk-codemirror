@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.sinnlabs</groupId>
+	<groupId>at.dhx</groupId>
 	<artifactId>zk-codemirror</artifactId>
 	<version>0.4</version>
 	<packaging>jar</packaging>
@@ -19,8 +19,8 @@
 	</licenses>
 
 	<scm>
-		<url>https://github.com/sinnlabs/zk-codemirror/tags/org.sinnlabs.zk.codemirror-0.1</url>
-		<connection>scm:git:git://github.com/sinnlabs/zk-codemirror.git/tags/org.sinnlabs.zk.codemirror-0.1</connection>
+		<url>https://github.com/dhx/zk-codemirror/tags/at.dhx.zk.codemirror-0.1</url>
+		<connection>scm:git:git://github.com/dhx/zk-codemirror.git/tags/at.dhx.zk.codemirror-0.1</connection>
 	</scm>
 
 	<developers>
@@ -109,7 +109,7 @@
 				</dependencies>
 			</plugin>
 			
-			<plugin>
+			<!--plugin>
 				<groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>1.6</version>
@@ -125,7 +125,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin-->
 		</plugins>
 		<resources>
 			<resource>
