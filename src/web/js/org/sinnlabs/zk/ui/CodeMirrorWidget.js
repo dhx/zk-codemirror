@@ -50,6 +50,8 @@ zk.$package('org.sinnlabs.zk.ui');
 			// otherwise showing line numbers won't be runtime on/off switchable. 
 			_lineNumbers: false, 
 
+			_placeholder: "",
+
 			$init: function () { 
 				this.$supers('$init', arguments);
 				//zWatch.listen({onSize: [this, this.onSize_]});
@@ -61,6 +63,7 @@ zk.$package('org.sinnlabs.zk.ui');
 				this._codemirror = CodeMirror.fromTextArea(this.$n('codemirror'), {
 					lineNumbers: wgt._lineNumbers,
 					mode: wgt._mode,
+					placeholder: wgt._placeholder,
 					matchBrackets: true
 				});
 				this._codemirror.on('blur', function () {
@@ -131,7 +134,20 @@ zk.$package('org.sinnlabs.zk.ui');
             getLineNumbers: function() {
                 return this._lineNumbers;
             },
-			
+
+			setPlaceholder: function (val) {
+				if (this._placeholder != val) {
+					this._placeholder = val;
+					if (this._codemirror) {
+						this._codemirror.setOption("placeholder", val);
+					}
+				}
+			},
+
+			getPlaceholder: function () {
+				return this._placeholder;
+			},
+
 			refresh: function() {
 				$('.CodeMirror').each(function(i, el) {
 				    el.CodeMirror.refresh();

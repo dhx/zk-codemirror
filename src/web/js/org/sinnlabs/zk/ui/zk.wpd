@@ -10,5 +10,6 @@
     <script src="mode/tiddlywiki.js" />
     <script src="mode/tiki.js" />
     <script src="mode/asciidoc.js" />
+    <script src="addon/display/placeholder.js" />
     <widget name="CodeMirrorWidget"/>
 </package>
