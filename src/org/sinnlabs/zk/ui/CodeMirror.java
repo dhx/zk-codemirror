@@ -84,6 +84,8 @@ public class CodeMirror extends Textbox {
 
 	private boolean _lineNumbers = false; // as in CodeMirrorWidget.js
 
+	private boolean _lineWrapping = false; // as in CodeMirrorWidget.js
+
 	static {
 	    Set<String> clikeExts = new HashSet<String>();
 	    clikeExts.addAll(Arrays.asList(
@@ -177,6 +179,7 @@ public class CodeMirror extends Textbox {
 		super.renderProperties(renderer);
 		render(renderer, "mode", _mode);
 		render(renderer, "lineNumbers", _lineNumbers);
+		render(renderer, "lineWrapping", _lineWrapping);
 	}
 
 	private static String findModeByExtension(String extension) {
@@ -201,5 +204,14 @@ public class CodeMirror extends Textbox {
     public void setLineNumbers(boolean value) {
         _lineNumbers = value;
         smartUpdate("lineNumbers", _lineNumbers);
+    }
+
+    public boolean getLineWrapping() {
+        return _lineWrapping;
+    }
+
+    public void setLineWrapping(boolean value) {
+        _lineWrapping = value;
+        smartUpdate("lineWrapping", _lineWrapping);
     }
 }

@@ -50,6 +50,8 @@ zk.$package('org.sinnlabs.zk.ui');
 			// otherwise showing line numbers won't be runtime on/off switchable. 
 			_lineNumbers: false, 
 
+			_lineWrapping: false,
+
 			_placeholder: "",
 
 			$init: function () { 
@@ -64,6 +66,7 @@ zk.$package('org.sinnlabs.zk.ui');
 					lineNumbers: wgt._lineNumbers,
 					mode: wgt._mode,
 					placeholder: wgt._placeholder,
+					lineWrapping: wgt._lineWrapping,
 					matchBrackets: true
 				});
 				this._codemirror.on('blur', function () {
@@ -134,6 +137,19 @@ zk.$package('org.sinnlabs.zk.ui');
             getLineNumbers: function() {
                 return this._lineNumbers;
             },
+
+			setLineWrapping: function (val) {
+				if (this._lineWrapping != val) {
+					this._lineWrapping = val;
+					if (this._codemirror) {
+						this._codemirror.setOption("lineWrapping", val);
+					}
+				}
+			},
+
+			getLineWrapping: function () {
+				return this._lineWrapping;
+			},
 
 			setPlaceholder: function (val) {
 				if (this._placeholder != val) {
