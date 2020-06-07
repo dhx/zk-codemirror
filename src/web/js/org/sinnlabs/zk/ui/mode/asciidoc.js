@@ -643,7 +643,11 @@
 
             // Normal start.
             var currentState = state.current;
-            var currentLine = stream.match(/.*$/, false)[0];
+            var currentLineMatch = stream.match(/.*$/, false);
+            if (!currentLineMatch) {
+                throw new Error("unable to match line in stream: " + stream);
+            }
+            var currentLine = currentLineMatch[0];
             var tokenized = tokenizer.getLineTokens(currentLine, currentState);
             // We got a {tokens, state} object.
             // Each token is a {value, type} object.
