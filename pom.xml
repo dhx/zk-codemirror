@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>at.dhx</groupId>
 	<artifactId>zk-codemirror</artifactId>
-	<version>0.4</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>ZK Codemirror</name>
-	<description>Integration of Codemirror library for ZK 7 framework</description>
+	<description>Integration of Codemirror library for ZK 9 framework</description>
 	<url>https://github.com/sinnlabs/zk-codemirror</url>
 
 	<licenses>
@@ -36,7 +36,7 @@
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zul</artifactId>
-			<version>7.0.3</version>
+			<version>9.0.0.1</version>
 		</dependency>
 	</dependencies>
 
